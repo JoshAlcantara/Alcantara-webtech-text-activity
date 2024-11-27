@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #03122F;
+}
+
+.table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.boxes {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    border: 1px solid #413B61;
+    text-align: center;
+    align-items: center;
+}
+
+.text {
+    position: absolute;
+    white-space: nowrap;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: #F3DADF;
+    font-size: 30px;
+    font-weight: 500px;
+    text-align: center;
+}
+
+.right {
+    animation-name: moveRight;
+    animation-timing-function: ease;
+}
+
+.left {
+    animation-name: moveLeft;
+    animation-timing-function: ease;
+}
+
+.side-to-side {
+    animation-name: sideToSide;
+    animation-timing-function: ease;
+}
+
+.side-to-side_with_color {
+    animation-name: sideToSideColor;
+    animation-timing-function: ease;
+}
+
+.up {
+    animation-name: moveUp;
+    animation-timing-function: ease;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+.down {
+    animation-name: moveDown;
+    animation-timing-function: ease;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+
+.up-down {
+    animation-name: bounce;
+    animation-timing-function: ease;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    background-color: #F1916D;
+    border-radius: 4px;
+    position: absolute;
+    animation: colorChange 1s infinite, sideToSideColorM 2s infinite linear;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #413B61;
+    color: #F3DADF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+@keyframes moveRight {
+    from {left: 2%}
+    to {left: 85%}
+}
+
+@keyframes moveLeft {
+    from {right: 2%}
+    to {right: 85%}
+}
+
+@keyframes sideToSide {
+    0% {left: 2%;}
+    50% {left: 85%;}
+    100% {left: 2%;}
+}
+
+@keyframes sideToSideColor {
+    0% {left: 2%; color: #F1916D}
+    50% {left: 70%; color: #F1916D}
+    51% {color: #AE7DAC;}
+    100% {left: 2%; color: #AE7DAC}
+}
+
+@keyframes moveUp {
+    from {top: 85%}
+    to {top: 2%}
+}
+
+@keyframes moveDown {
+    from {top: 2%}
+    to {top: 85%}
+}
+
+@keyframes bounce {
+    0%, 100% {top: 2%}
+    50% {top: 85%}
+}
+
+@keyframes colorChange {
+    0% {background-color: #F1916D;}
+    50% {background-color: #AE7DAC;}
+    100% {background-color: #F1916D;}
+}
+
+@keyframes sideToSideColorM {
+    0% {left: 1%; color: #F1916D}
+    50% {left: 98%; color: #F1916D}
+    51% {color: #AE7DAC;}
+    100% {left: 1%; color: #AE7DAC}
+}
+
